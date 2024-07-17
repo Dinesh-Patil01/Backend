@@ -1,0 +1,227 @@
+Q1. How do you list all the databases present in your MongoDB server?
+ANS: => Sure, here are the steps in a more concise form:
+
+        ### Using Mongo Shell
+        1. **Open Terminal** and start Mongo shell:
+        ```bash
+        mongo
+        ```
+        2. **List Databases**:
+        ```javascript
+        show dbs
+        ```
+
+        ### Using MongoDB Compass
+        1. **Open MongoDB Compass** and connect to your server.
+        2. **View Databases** in the UI.
+
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q2.
+ANS: => In MongoDB, you can create or switch to a database using the `use` command. If the database doesn't exist, MongoDB will create it when you insert the first document into a collection within that database.
+
+        ### Using Mongo Shell
+        1. **Open Terminal** and start Mongo shell:
+        ```bash
+        mongo
+        ```
+        2. **Create or Switch to a Database**:
+        ```javascript
+        use database_name
+        ```
+
+        Replace `database_name` with the name of the database you want to create or switch to. For example:
+        ```javascript
+        use myNewDatabase
+        ```
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q3. How can you create a collection named "students" in your MongoDB database?
+ANS: => You can create a collection named "students" in your MongoDB database using several methods. Here are the steps for each approach:
+
+        ### Using Mongo Shell
+        1. **Open Terminal** and start Mongo shell:
+        ```bash
+        mongo
+        ```
+        2. **Switch to Your Database**:
+        ```javascript
+        use yourDatabaseName
+        ```
+        3. **Create the Collection**:
+        ```javascript
+        db.createCollection("students")
+        ```
+
+        ### Using MongoDB Compass
+        1. **Open MongoDB Compass** and connect to your server.
+        2. **Switch to Your Database**: Select your database from the list.
+        3. **Create the Collection**: Click on the "Create Collection" button, enter "students" as the collection name, and click "Create Collection."
+
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q4. Write the command to insert a single document into the "students" collection with at least three fields: name, age, and course?
+ANS: => To insert a single document into the "students" collection with fields for name, age, and course, you can use the following MongoDB command:
+
+        ```javascript:-----
+        db.students.insertOne({
+        name: "John Doe",
+        age: 21,
+        course: "Computer Science"
+        })
+        ```
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q5. How would you insert multiple documents into the "students" collection in a single command?
+ANS: => You can insert multiple documents into the "students" collection in a single command using the `insertMany` method. Here are the steps for each approach:
+
+        ### Using Mongo Shell:-------
+        1. **Open Terminal** and start Mongo shell:
+        ```bash
+        mongo
+        ```
+        2. **Switch to Your Database**:
+        ```javascript
+        use yourDatabaseName
+        ```
+        3. **Insert Multiple Documents**:
+        ```javascript
+        db.students.insertMany([
+            { name: "John Doe", age: 20, major: "Computer Science" },
+            { name: "Jane Smith", age: 22, major: "Mathematics" },
+            { name: "Alice Johnson", age: 19, major: "Physics" }
+        ])
+        ```
+
+        ### Using MongoDB Compass:---------
+        1. **Open MongoDB Compass** and connect to your server.
+        2. **Switch to Your Database**: Select your database from the list.
+        3. **Select the "students" Collection**.
+        4. **Insert Documents**:
+        - Click on the "Insert Document" button.
+        - Switch to "JSON Mode" and enter your documents as an array:
+            ```json
+            [
+                { "name": "John Doe", "age": 20, "major": "Computer Science" },
+                { "name": "Jane Smith", "age": 22, "major": "Mathematics" },
+                { "name": "Alice Johnson", "age": 19, "major": "Physics" }
+            ]
+            ```
+        - Click "Insert."
+
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q6. What command is used to find or read all documents in the "students" collection?
+ANS: => To find or read all documents in the "students" collection, you can use the following MongoDB command:
+
+        ```javascript
+        db.students.find()
+        ```
+
+        This command retrieves all the documents in the "students" collection. To format the output in a more readable way, you can add the `.pretty()` method:
+
+        ```javascript
+        db.students.find().pretty()
+        ```
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q7. How can you read or find the first document in the "students" collection?
+ANS: => You can read or find the first document in the "students" collection using various methods. Here are the steps for each approach:
+
+        ### Using Mongo Shell::------
+        1. **Open Terminal** and start Mongo shell:
+        ```bash
+        mongo
+        ```
+        2. **Switch to Your Database**:
+        ```javascript
+        use yourDatabaseName
+        ```
+        3. **Find the First Document**:
+        ```javascript
+        db.students.findOne()
+        ```
+
+        ### Using MongoDB Compass::--------------
+        1. **Open MongoDB Compass** and connect to your server.
+        2. **Switch to Your Database**: Select your database from the list.
+        3. **Select the "students" Collection**.
+        4. **Find the First Document**:
+        - Click on the "Find" button to query the collection.
+        - By default, the documents will be displayed, and you can see the first document.
+        
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q8. Describe the command to update the course field of a specific student named "John Doe" to "Data Science".
+ANS: => To update the course field of a specific student named "John Doe" to "Data Science", you can use the following MongoDB command:
+
+        ```javascript
+        db.students.updateOne(
+        { name: "John Doe" },       // Filter to find the document
+        { $set: { course: "Data Science" } }  // Update operation to set the course field
+        )
+        ```
+
+        This command uses the `updateOne` method to find a document with the name "John Doe" and updates the `course` field to "Data Science".
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q9. What command would you use to increment the age field of all documents in the "students" collection by 1?
+ANS: => To increment the `age` field of all documents in the "students" collection by 1, you can use the `updateMany` method with the `$inc` update operator. Here are the steps for each approach:
+
+        ### Using Mongo Shell
+        1. **Open Terminal** and start Mongo shell:
+        ```bash
+        mongo
+        ```
+        2. **Switch to Your Database**:
+        ```javascript
+        use yourDatabaseName
+        ```
+        3. **Increment the `age` Field**:
+        ```javascript
+        db.students.updateMany({}, { $inc: { age: 1 } })
+        ```
+
+        ### Using MongoDB Compass
+        1. **Open MongoDB Compass** and connect to your server.
+        2. **Switch to Your Database**: Select your database from the list.
+        3. **Select the "students" Collection**.
+        4. **Perform the Update**:
+        - Click on the "UPDATE" button.
+        - In the "Update Conditions" section, leave the filter empty (`{}`) to apply the update to all documents.
+        - In the "Update" section, enter the update operation:
+            ```json
+            { "$inc": { "age": 1 } }
+            ```
+        - Click "Update" to apply the changes.
+
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q10. How can you delete a document with a specific name from the "students" collection?
+ANS: => To delete a document with a specific name from the "students" collection in MongoDB, you can use the `deleteOne` command. Here’s how you can do it:
+
+        ```javascript
+        db.students.deleteOne({ name: "John Doe" })
+        ```
+
+        This command will delete the first document it finds in the "students" collection where the `name` field matches "John Doe". If there are multiple documents with the same name and you want to delete all of them, you can use `deleteMany` instead:
+
+        ```javascript
+        db.students.deleteMany({ name: "John Doe" })
+        ```
+
+        This will delete all documents in the "students" collection where the `name` field matches "John Doe".
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q11. Write the command to delete all documents from the "students" collection where the age is greater than or equal to a specific value.
+ANS: => To delete all documents from the "students" collection where the age is greater than or equal to a specific value, you can use the following MongoDB command:
+
+        ```javascript
+        db.students.deleteMany({ age: { $gte: specific_value } })
+        ```
+
+        Replace `specific_value` with the actual value you want to use as the threshold for deleting documents. This command uses `deleteMany()` method to remove all documents that match the specified condition (`age` greater than or equal to `specific_value`) from the "students" collection.
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q12. How do you find documents in the "students" collection where the course field is "Data Science"?
+ANS: => To find documents in the "students" collection where the course field is "Data Science", you can use the `find` method in MongoDB with a query that specifies the condition. Here’s how you can do it:
+
+        ```javascript
+        db.students.find({ course: "Data Science" })
+        ```
+
+        This command will retrieve all documents from the "students" collection where the `course` field is equal to "Data Science". If you want to format the output for readability, you can add `.pretty()` at the end:
+
+        ```javascript
+        db.students.find({ course: "Data Science" }).pretty()
+        ```
+---------------------------------------------------------------------------------------------------------------------------------------->>>
