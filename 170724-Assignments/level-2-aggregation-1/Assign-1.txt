@@ -1,0 +1,54 @@
+Q1. Write Mongo query to retrieve the documents from the orders where the customer_id is 1.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q2. Write Mongo query to retrieve documents from the products where supplier_id is 3 .
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q3. Write Mongo query to retrieve the documents from the orders collection with "status": "shipped" .
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q4. Write Mongo query to retrieve the amount and paymentMethod from payments where the paymentMethod is not UPI.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q5. Write Mongo query to retrieve the payment status where the amount is greater than 100.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q6. Write Mongo query to retrieve the shipper_id and price from the order_details where the price is greater than 2000.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q7. Write Mongo query to retrieve the customer_id and _id from the orders where the status is not shipped.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q8. Write Mongo query to retrieve documents from the products where category_id is 1 with out product _id.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q9. Write Mongo query to retrieve name,quantity from the products where price greater than 1500 .
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q10. Write Mongo query to retrieve the name from the shippers where the phone number is 1-800-742-5877.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q11. Write Mongo query to retrieve the city and phone of the suppliers where the suppliers name is Sony.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q12. Write Mongo query to retrieve the name of the suppliers where the city is Tokyo.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q13. Write Mongo query to find amount of payment made through "UPI" ?
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q14. Write Mongo query to find buyers city as key name "city" who uses hot mail ?
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q15. Use MongoDB aggregation to retrieve the top 5 most recent orders that have been shipped, projecting the order date, status, and total amount.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q16. Aggregate the first 3 payments with a "success" status, projecting the payment date, amount, and method.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q17. Aggregate all pending orders, sort them by the order date in descending order, and project the customer ID, order date, and total amount.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q18. Aggregate products, sort them by quantity in descending order, limit the result to the top 10 items, and project the product name and quantity.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>

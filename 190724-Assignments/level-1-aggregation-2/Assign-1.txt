@@ -1,0 +1,36 @@
+Q1. Write Mongo query to retrieve the unique city's from the buyers address as "\_id".
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q2. Write Mongo query to retrieve the unique zip from the buyers address as "\_id".
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q3. Write Mongo query to retrieve the unique order_id in ascending order from the order_details.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q4. Write Mongo query to retrieve the unique customer_id from the orders.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q5. Write Mongo query to retrieve the unique paymentMethod's from the payments collection as "\_id".
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q6. Write Mongo query to retrieve the unique payment status's from the payments collection as "\_id".
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q7. Write Mongo query to retrieve the unique category_id product from products.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q8. Write a MongoDB query to aggregate the total sales per customer and list the top 5 customers by total sales amount. Include the customer's ID and their total sales in the output.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q9. Aggregate the orders to count how many there are per status and show only the first 3 statuses based on the aggregated count.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q10. Write a MongoDB query to calculate the total amount of payments that have a success status.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q11. Aggregate suppliers to find the one with the highest total quantity of products supplied, filtering to only include suppliers with a total product quantity greater than 100.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
+Q12. Write a MongoDB query to find the top-selling product category based on total sales revenue.
+ANS: =>
+---------------------------------------------------------------------------------------------------------------------------------------->>>
