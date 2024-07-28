@@ -3,12 +3,15 @@ const crypto = require('crypto');
 
 // Retrieve the command line arguments
 const args = process.argv.slice(2);
-
+console.log(args)
 // The first argument is the operation (e.g., add, sub, etc.)
 const operation = args[0];
 
+
 // The remaining arguments are the numbers (convert them to numbers)
 const numbers = args.slice(1).map(Number);
+console.log(numbers)
+
 
 // Function to perform the calculator operations
 function calculate(operation, numbers) {
@@ -85,6 +88,8 @@ function calculate(operation, numbers) {
       const randomBytes = crypto.randomBytes(numbers[0]);
       console.log(`Random number: ${randomBytes.toString('binary')}`);
       break;
+
+      
 
     default:
       console.log("Invalid operation");

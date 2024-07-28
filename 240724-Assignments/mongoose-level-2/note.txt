@@ -1,0 +1,55 @@
+const mongoose = require('mongoose');
+const url = "mongodb://127.0.0.1:27017/glass"
+
+const glassSchema = mongoose.Schema({
+    color: String,
+    material: String,
+    size: Number,
+    brand: String
+})
+
+const GlassModel = mongoose.model("glass", glassSchema)
+
+const main = async() => {
+    try {
+        const connection = await mongoose.connect(url)
+        await GlassModel.insertMany([ {
+            color: 'Red',
+            material: 'Plastic',
+            size: '4',
+            brand: 'BrandA'
+          },
+          {
+            color: 'Blue',
+            material: 'Metal',
+            size: '3',
+            brand: 'BrandB'
+          },
+          {
+            color: 'Green',
+            material: 'Glass',
+            size: '5',
+            brand: 'BrandC'
+          },])
+
+          const glass = GlassModel({
+                color: 'White',
+                material: 'mobile',
+                size: '6',
+                brand: 'BrandEdd'
+          })
+          await glass.save()
+          connection.disconnect()
+        console.log("connected to DB")
+    } catch (error) {
+        console.log(`error connected to DB ${error}`)
+    }
+}
+
+main()
+
+
+
+------------CRUD---------------------
+
+title, genre, director, releaseDate, duration, rating, description
